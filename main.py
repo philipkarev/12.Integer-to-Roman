@@ -9,8 +9,12 @@ class Solution:
 
         s = ''  # output string of roman number
 
-        for i in range(len(str(num))):
-            s = rv[i][int(list(str(num))[len(str(num)) - i - 1]) - 1] + s
+        strnum = str(num)
+        lensn = len(strnum)
+        listsn = list(strnum)
+
+        for i in range(lensn):
+            s = rv[i][int(listsn[lensn - i - 1]) - 1] + s
 
         return s
 
